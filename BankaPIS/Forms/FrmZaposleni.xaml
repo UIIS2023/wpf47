@@ -1,0 +1,71 @@
+﻿<Window x:Class="BankaPIS.Forms.FrmZaposleni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankaPIS.Forms"
+        mc:Ignorable="d"
+        Title="FrmZaposleni" Height="450" Width="400">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Profil">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label_ime" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.14,-1.069"/>
+                    <Label x:Name="label_prezime" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.505"/>
+                    <Label x:Name="label_email" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,143,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label_brojTelefona" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label_adresa" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,258,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label_jmbg" Content="" HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Klijenti">
+                <Grid Background="#FFE5E5E5" HorizontalAlignment="Left" Width="794">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="47*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="730*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Ime" FontSize="20" HorizontalAlignment="Left" Margin="104,60,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+                    <Label Content="Prezime" FontSize="20" HorizontalAlignment="Left" Margin="85,134,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+                    <Label Content="JMBG" FontSize="20" HorizontalAlignment="Left" Margin="95,221,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+                    <Button Content="PRETRAZI" FontSize="15" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="55,329,0,0" VerticalAlignment="Top" Grid.Column="3" Click="Pretrazi"  Width="140" Height="34" RenderTransformOrigin="0.533,0.61"/>
+                    <TextBox x:Name="txt_srcIme" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="15" Margin="55,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="3" Height="27"/>
+                    <TextBox x:Name="txt_srcPrezime" HorizontalContentAlignment="Center" FontSize="15" HorizontalAlignment="Left" Margin="55,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="3" Height="27"/>
+                    <TextBox x:Name="txt_srcJmbg" HorizontalContentAlignment="Center" FontSize="15" HorizontalAlignment="Left" Margin="55,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" Grid.Column="3" Height="27"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Dodaj klijenta" Margin="-2,-2,-2,0">
+                <Grid Background="#FFE5E5E5" HorizontalAlignment="Left" Width="794">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Content="Ime" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="26" Width="33"/>
+                    <Label Grid.Column="1" Content="Prezime" HorizontalAlignment="Left" Margin="15,36,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
+                    <Label Grid.Column="1" Content="JMBG" HorizontalAlignment="Left" Margin="15,67,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
+                    <Label Grid.Column="1" Content="Adresa" HorizontalAlignment="Left" Margin="15,93,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
+                    <Label Grid.Column="1" Content="Grad" HorizontalAlignment="Left" Margin="15,119,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
+                    <Label Grid.Column="1" Content="Broj telefona" HorizontalAlignment="Left" Margin="15,145,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
+                    <Label Grid.Column="1" Content="Email" HorizontalAlignment="Left" Margin="15,176,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
+                    <Label Grid.Column="1" Content="Korisnicko ime" HorizontalAlignment="Left" Margin="15,203,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+                    <Label Grid.Column="1" Content="Sifra" HorizontalAlignment="Left" Margin="15,229,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_ime"  HorizontalAlignment="Left" Margin="122,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_prezime" HorizontalAlignment="Left" Margin="122,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_jmbg" HorizontalAlignment="Left" Margin="122,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_adresa" HorizontalAlignment="Left" Margin="122,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_grad" HorizontalAlignment="Left" Margin="122,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_broj_telefona" HorizontalAlignment="Left" Margin="122,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_email" HorizontalAlignment="Left" Margin="122,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_username" HorizontalAlignment="Left" Margin="122,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Grid.Column="1" x:Name="txt_dodavanje_password" HorizontalAlignment="Left" Margin="122,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Grid.Column="1" Content="Dodaj" HorizontalAlignment="Left" Margin="23,289,0,0" VerticalAlignment="Top" Width="219" Click="Dodaj_klijenta"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
